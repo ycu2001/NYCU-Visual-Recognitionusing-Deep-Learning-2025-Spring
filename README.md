@@ -12,3 +12,8 @@ Name: 楊沁瑜
   * PyTorch (torch, torchvision)
   * Additional libraries: pandas, matplotlib, tqdm
 ## Performance Snapshot 
+<table>
+  <tr>
+    <td>ResNet50+LabelSmoothingCrossEntropy+TTA</td>
+    <td>0.9</td>
+  </tr>
