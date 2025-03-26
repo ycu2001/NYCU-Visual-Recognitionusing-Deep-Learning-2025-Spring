@@ -187,7 +187,7 @@ def count_parameters(model):
 print(f"Number of parameters: {count_parameters(model):,}")
 
 # 訓練模型並記錄損失
-num_epochs = 15
+num_epochs = 20
 train_losses = []
 val_accuracies = []
 
@@ -271,6 +271,7 @@ plt.savefig('/content/drive/MyDrive/Colab Notebooks/training_curves.png')
 #model_path = '/content/drive/MyDrive/Colab Notebooks/resnet18_modified.pth'
 #model.load_state_dict(torch.load(model_path))
 
+
 # 生成測試集預測
 model.eval()
 predictions = []
@@ -281,21 +282,17 @@ with torch.no_grad():
     for batch_idx, (images, img_names) in enumerate(tqdm(test_loader, desc="Generating Predictions with TTA", unit="batch", total=total_batches)):
         try:
             images = images.to(device)
-            outputs = model(images) # 原圖預測
-            images_flipped = torch.flip(images, dims=[3])   # 水平翻轉預測
+            # 原圖預測
+            outputs = model(images)
+            # 水平翻轉預測
+            images_flipped = torch.flip(images, dims=[3])
             outputs_flipped = model(images_flipped)
-            images_rotated = transforms.functional.rotate(images, 15)   # 旋轉 ±15 度預測
-            outputs_rotated = model(images_rotated)
-            images_bright = transforms.functional.adjust_brightness(images, 1.2)    # 亮度調整 (1.2x) 預測
-            outputs_bright = model(images_bright)
-            images_contrast = transforms.functional.adjust_contrast(images, 1.2)      # 對比度調整 (1.2x) 預測
-            outputs_contrast = model(images_contrast)
-
-            outputs = (outputs + outputs_flipped + outputs_rotated + outputs_bright + outputs_contrast) / 5
-
+            # 平均兩種預測的 logits
+            outputs = (outputs + outputs_flipped) / 2
+            # 獲取預測類別
             _, preds = torch.max(outputs, 1)
             batch_preds = preds.cpu().numpy()
-
+            # 檢查批次長度一致性
             if len(batch_preds) != len(img_names):
                 print(f"Batch {batch_idx}: Mismatch! Predictions: {len(batch_preds)}, Image names: {len(img_names)}")
                 print(f"Image names in this batch: {img_names}")
@@ -305,6 +302,7 @@ with torch.no_grad():
         except Exception as e:
             print(f"Error processing batch {batch_idx}: {e}")
             continue
+
 
 print(f"Length of image_names: {len(image_names)}")
 print(f"Length of predictions: {len(predictions)}")
