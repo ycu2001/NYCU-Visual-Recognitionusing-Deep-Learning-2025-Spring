@@ -1,5 +1,6 @@
-# NYCU-Visual-Recognitionusing-Deep-Learning-2025-Spring-HW1
+# NYCU-Visual-Recognitionusing-Deep-Learning-2025-Spring
 StudentID: 110550052
+Name: 楊沁瑜
 ## Introduction
 * Overview: This project is a part of NYU Computer Vision 2025 Spring HW1, focusing on image classification using deep learning.
 * Task: Classify images into 100 categories, using a dataset of 21,024 training/validation images and 2,344 test images.
