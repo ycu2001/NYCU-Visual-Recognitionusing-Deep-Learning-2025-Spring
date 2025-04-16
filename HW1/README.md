@@ -1,4 +1,4 @@
-# NYCU-Visual-Recognitionusing-Deep-Learning-2025-Spring
+# NYCU-Visual-Recognitionusing-Deep-Learning-2025-Spring_HW1
 StudentID: 110550052
 Name: 楊沁瑜
 ## Introduction
