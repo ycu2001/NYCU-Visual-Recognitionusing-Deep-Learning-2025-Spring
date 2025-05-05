@@ -34,7 +34,7 @@ your_project_directory/
 
 
 ## Performance shapshot
-| Backbone        | Validation mAP\@0.5 | Public LB Score |  
-| --------------- | ------------------- | --------------- |  
-| ResNet-18 (FPN) | 0.3209              | 0.3209          |  
+| Backbone        | Public mAP Score    | Notes                                   |  
+| --------------- | ------------------- | --------------------------------------- |  
+| ResNet-18 (FPN) | 0.3209              | Best performance, stable learning       |  
 
