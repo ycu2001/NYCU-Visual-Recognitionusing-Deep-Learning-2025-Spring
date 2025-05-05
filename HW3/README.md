@@ -3,13 +3,11 @@
 StudentID: 110550052  
 Name: 楊沁瑜
 
----
 
 ## Introduction
 This project implements instance segmentation using Mask R-CNN with a customized ResNet-FPN backbone.  
 Training and evaluation are conducted on the provided dataset, and final predictions are generated for the test set.
 
----
 
 ## How to install
 1. Download `cv_hw3_final.ipynb` and `utils.py`.
@@ -33,6 +31,5 @@ your_project_directory/
 │ └── test_image_name_to_ids.json
 ```
 
----
 
 ## Performance shapshot
