@@ -1,7 +1,7 @@
 # NYCU Visual Recognitionusing Deep Learning 2025 Spring HW3
 
-**StudentID:** 110550052
-**Name:** 楊沁瑜
+StudentID: 110550052  
+Name: 楊沁瑜
 
 ---
 
@@ -14,7 +14,8 @@ Training and evaluation are conducted on the provided dataset, and final predict
 ## How to install
 1. Download `cv_hw3_final.ipynb` and `utils.py`.
 2. Put them in the same directory as your dataset.
-
+3. Check the path name of the files, then run `cv_hw3_final.ipynb` in colab.
+   
 ### Data structure
 ```bash
 your_project_directory/
@@ -31,8 +32,6 @@ your_project_directory/
 │ │ └── [image_name].tif
 │ └── test_image_name_to_ids.json
 ```
-
-3. Check the path name of the files, then run `cv_hw3_final.ipynb` in colab.
 
 ---
 
