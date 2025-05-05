@@ -6,7 +6,8 @@ Name: 楊沁瑜
 
 ## Introduction
 This project implements instance segmentation using Mask R-CNN with a customized ResNet-FPN backbone.  
-Training and evaluation are conducted on the provided dataset, and final predictions are generated for the test set.
+Training and evaluation are conducted on the provided dataset, and final predictions are generated for the test set.  
+All code is written in Python and tested in Google Colab.
 
 
 ## How to install
@@ -33,3 +34,7 @@ your_project_directory/
 
 
 ## Performance shapshot
+| Backbone        | Validation mAP\@0.5 | Public LB Score |  
+| --------------- | ------------------- | --------------- |  
+| ResNet-18 (FPN) | 0.3209              | 0.3209          |  
+
