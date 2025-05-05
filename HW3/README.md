@@ -16,7 +16,7 @@ Training and evaluation are conducted on the provided dataset, and final predict
 2. Put them in the same directory as your dataset.
 
 ### Data structure
-’‘’
+```bash
 your_project_directory/
 ├── cv_hw3_final.ipynb
 ├── utils.py
@@ -30,7 +30,7 @@ your_project_directory/
 │ ├── test/
 │ │ └── [image_name].tif
 │ └── test_image_name_to_ids.json
-‘’‘
+```
 
 3. Check the path name of the files, then run `cv_hw3_final.ipynb` in colab.
 
