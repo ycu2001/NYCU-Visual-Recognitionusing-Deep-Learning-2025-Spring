@@ -11,5 +11,26 @@ This project focuses on image restoration for degraded images caused by rain and
 1. Download `cv_hw4.ipynb` and `model_swinir.py`.
 2. Put them in the same directory as your dataset.
 3. Check the path name of the files, then run `cv_hw4.ipynb` in colab.
+### Data structure
+```bash
+your_project_directory/
+├── cv_hw4.py
+├── model_swinir.py
+├── hw4_dataset/
+│   ├── train/
+│   │   ├── degraded/
+│   │   │   ├── rain-1.png
+│   │   │   ├── snow-1.png
+│   │   │   └── ...
+│   │   └── clean/
+│   │       ├── rain_clean-1.png
+│   │       ├── snow_clean-1.png
+│   │       └── ...
+│   └── test/
+│       └── degraded/
+│           ├── 0.png
+│           ├── 1.png
+│           └── ...
+```
 
-## 
+### Performance snapshot
