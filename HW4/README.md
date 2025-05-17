@@ -34,3 +34,6 @@ your_project_directory/
 ```
 
 ### Performance snapshot
+| Model                   | PSNR Score          | Notes                                   |  
+| ----------------------- | ------------------- | --------------------------------------- |  
+| Prompt + SwinIR Hybrid  | 26.28               | With Charbonnier loss + TTA             |  
